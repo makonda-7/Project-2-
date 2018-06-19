@@ -1,0 +1,4 @@
+﻿1. https://s3.amazonaws.com/scrstorage/nc5178i07515x3375.jpg  слайдовая карусель
+2. https://s3.amazonaws.com/scrstorage/gu51783h70938e6vw99.jpg  ховерное состояние блока
+3) https://s3.amazonaws.com/scrstorage/e1888371l842tt5j7.jpg - в любую li добавить dropdown(submenu), застилить на свое усмотрение, но чтобы сочеталось с дизайном
+3. Время на проект 8 часов

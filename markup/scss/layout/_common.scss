@@ -1,0 +1,318 @@
+#wrapper {
+	width: 100%;
+	overflow: hidden;
+	font-family: $base-font-family;
+	font-size: $font-size-base;
+}
+
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+	max-width: 1140px;
+}
+
+.slick-slider {
+	position: relative;
+
+	i {
+		font-size: 150%;
+	}
+}
+
+.slide {
+	box-shadow: inset 0 12px 21px 0 rgba(0,0,0,0.12);
+
+	img {
+		width: 100%;
+	}
+}
+
+.slick-arrow {
+	@include animate(color);
+
+	position: absolute;
+	z-index: 10;
+	border: none;
+	background-color: transparent;
+	color: $white;
+	outline: none;
+	right: 3%;
+	font-size: 14px;
+
+	@include media (">=tablet") {
+		font-size: 22px;
+	}
+
+	&:hover {
+		color: #99A2A8;
+	}
+}
+
+.slick-prev {
+	margin-right: 30px;
+	bottom: 4%;
+
+	@include media (">=tablet") {
+		margin-right: 60px;
+	}
+}
+
+.slick-next {
+	bottom: 4%;
+}
+
+.slick-dots {
+	position: absolute;
+	right: 2%;
+	top: 50%;
+	transform: translateY(-50%);
+
+	li {
+		color: #e1e8ee;
+		margin-bottom: -10px;
+		@extend %listreset;
+
+		&:hover {
+			color: $white;
+		}
+
+		&.active {
+			color: $white;
+		}
+	}
+
+	button {
+		@include animate(background-color);
+
+		padding: 0px 0px 0px 0px;
+   		margin-bottom: 5px;
+   		height: 6px;
+   		width: 6px;
+   		text-indent: -9999px;
+		border-radius: 50%;
+		background-color: #e1e8ee;
+		border: none;
+		outline: none;
+
+		&:hover {
+			background-color: $white;
+		}
+	}
+
+	.slick-active {
+		color: $white;
+	}
+}
+
+.visual-section{
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 400;
+
+	@include media (">=desktop") {
+		padding: 85px 0 50px;
+	}
+}
+
+.row {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.4545;
+	max-width: 455px;
+	margin: 0 auto 30px;
+
+	@include media (">=desktop") {
+		margin: 0 auto 86px;
+	}
+}
+
+h1 {
+	margin-bottom: 0;
+	font-weight: 300;
+
+	@include media (">=desktop") {
+		margin-bottom: 15px;
+	}
+}
+
+.section-holder {
+	font-size: 16px;
+
+	@include media (">=phone") {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	@include media (">=tablet") {
+		margin: 0 -15px;
+	}
+}
+
+.section {
+	@include animate(color);
+
+	color: #bdc5cf;
+	font-weight: 400;
+	//font-size: 16px;
+
+	@include media (">=phone") {
+		width: 50%;
+		padding: 0 15px 30px;
+	}
+	
+	@include media (">=tablet") {
+		width: 33.33%;
+		text-align: center;
+		padding: 0 15px 65px;
+	}
+
+	&:hover {
+		color: #43474d;
+
+		.image-holder {
+
+			.icon {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&:before{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.image-holder {
+		max-width: 360px;
+		margin: 0 auto 15px;
+		position: relative;
+		border-radius: 6px;
+		overflow: hidden;
+
+		img {
+			border-radius: 6px;
+			display: block;
+			width: 100%;
+		}
+
+		i {
+			color: $white;
+		}
+
+		&:before{
+			@include animate(opacity visibility);
+
+			content:'';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: rgba(0,0,0,.15);
+			opacity: 0;
+			visibility: hidden;
+			border-radius: 6px;
+		}
+	}
+
+	h4 {
+		line-height: 1.3888;
+		color: #43474d;
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+}
+
+.icon {
+	@include animate(opacity visibility box-shadow);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid rgba(255,255,255,.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	opacity: 0;
+	visibility: hidden;
+
+	&:hover {
+		box-shadow: 0 0 3px 2px rgba(255,255,255,.35);
+	}
+}
+
+.subscribe {
+	background-color: #5e6977;
+	color: #bdc5cf;
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.5;
+	padding: 50px 0;
+
+	@include media (">=desktop") {
+		padding: 106px 0 115px;
+	}
+
+	h2 {
+		font-weight: 300;
+		color: $white;
+	}
+
+	.caption {
+		max-width: 300px;
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+}
+
+.form-subscribe {
+	color: #86939e;
+	max-width: 350px;
+	margin: 0 auto;
+	position: relative;
+
+	@include media (">=tablet") {
+		max-width: 473px;
+	}
+
+	input {
+		min-height: 44px;
+		width: 100%;
+		border-radius: 6px;
+		border: 2px solid rgba($white,.2);
+		color: $white;
+		padding: 0 110px 0 20px;
+		background-color: transparent;
+
+		&:focus {
+			border-color: rgba($white,.2);
+			outline: none;
+		}
+
+		@include media (">=tablet") {
+			padding-right: 170px;
+		}
+	}
+
+	.btn-green {
+
+		background-color: #7dc855;
+		
+		@include media (">=tablet") {
+			min-width: 160px;
+		}
+
+		&:hover {
+			background-color: #63b03b;
+		}
+	}
+}
